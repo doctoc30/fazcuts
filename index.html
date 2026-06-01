@@ -17,10 +17,17 @@
   <p style="margin:30px 0;">Your 5th cut is FREE</p>
   <button onclick="alert('Booking coming soon')" style="padding:15px 30px;font-size:18px;background:#D4AF37;color:#000;border:none;border-radius:8px;font-weight:bold;">Book Now</button>
   
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
-    }
-  </script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "9f4daf55-8ade-4e9f-b64e-876a64ad294f",
+      safari_web_id: "PASTE_YOUR_SAFARI_WEB_ID_HERE", // ← REPLACE THIS
+      serviceWorkerPath: "OneSignalSDKWorker.js",
+      serviceWorkerParam: { scope: "/" }
+    });
+  });
+</script>
 </body>
 </html>
