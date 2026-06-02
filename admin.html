@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Send Alerts</title>
+  <title>Faz Cuts - Send Alerts</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     *{box-sizing:border-box}body{font-family:-apple-system,sans-serif;padding:16px;background:#f2f2f7;margin:0}
@@ -16,19 +16,19 @@
 </head>
 <body>
   <div class="card">
-    <h1 id="businessName">BUSINESS ALERTS</h1>
+    <h1 id="businessName">FAZ CUTS ALERTS</h1>
     <p class="sub">Type message → Send to all customers</p>
     <textarea id="msg" placeholder="Example: 4pm slot just opened today"></textarea>
     <button class="send" onclick="sendPush()">Send to All Customers</button>
     <div class="row">
       <button class="template" onclick="quickSend('Slot available today. Reply YES to book')">Slot Open</button>
-      <button class="template" onclick="quickSend('Your order is ready for collection')">Job Done</button>
+      <button class="template" onclick="quickSend('Your haircut is ready for collection')">Job Done</button>
     </div>
-    <button class="template" onclick="quickSend('20% off all services today only')">20% Off Today</button>
+    <button class="template" onclick="quickSend('20% off all cuts today only')">20% Off Today</button>
     <div id="status" class="status"></div>
   </div>
 <script>
-const BUSINESS_URL = "https://yourdomain.com";
+const BUSINESS_URL = "https://fazcuts.vibzapps.co.uk";
 const params = new URLSearchParams(window.location.search);
 const name = params.get('name');
 if(name) document.getElementById('businessName').innerText = name.toUpperCase() + ' ALERTS';
