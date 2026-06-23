@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>VIBZ App | Google Business Profile Specialists</title>
-    
-    <!-- PWA Meta Tags - VIBZ BRANDING -->
+
+<!-- PWA Meta Tags - VIBZ BRANDING -->
     <meta name="theme-color" content="#FF6B00">
     <meta name="msapplication-TileColor" content="#FF6B00">
     <meta name="msapplication-navbutton-color" content="#FF6B00">
@@ -18,6 +18,14 @@
     <link rel="apple-touch-icon" href="images/icon-192.png">
     <link rel="icon" href="images/icon-192.png">
     <link rel="manifest" href="manifest.json">
+    
+    <!-- NUCLEAR OPTION: Force iOS to update the root favicon cache -->
+    <link rel="shortcut icon" href="/images/icon-512.png">
+    
+    <!-- OneSignal SDK (Push Notifications) -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>window.OneSignalDeferred = window.OneSignalDeferred || [];</script>
+
     
     <!-- OneSignal SDK (Push Notifications) -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
